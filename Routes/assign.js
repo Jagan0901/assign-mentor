@@ -3,6 +3,7 @@ import { getMentor, getStudent, updateAssignedData, updateStudentById, getAssign
 
 const router = express.Router();
 
+//Assigning a student to a Mentor
 router.post("/", async(req,res)=>{
     const mentor = await getMentor(req);
     const mentorName = mentor.mentorName;
