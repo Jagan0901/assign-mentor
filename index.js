@@ -24,6 +24,11 @@ async function createConnection(){
 
 export const client = await createConnection();
 
+app.get("/", (req,res) => {
+    res.send(`Hi There!!!`)
+});
+
+
 app.use("/mentors",mentorRouter);
 app.use("/students",studentsRouter)
 app.use("/assign",assignRouter)
