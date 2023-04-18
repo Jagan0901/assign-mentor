@@ -31,13 +31,17 @@ app.get("/", (req,res) => {
 //If you are creating students and mentors data, Please try to create respective data in the given below field(key) format
 
 // 1. students data : 
-//      studentId: any Number,
-//      studentName: your wish,
-//      assigned : "No"
+//      {
+//        studentId   : any Number,
+//        studentName : your wish,
+//        assigned    : "No"
+//      }
 
 // 2. mentors data : 
-//      mentorId: any Number,
-//      mentorName: "",
+//      { 
+//         mentorId   : any Number,
+//         mentorName : "",
+//      }
 
 
 app.use("/mentors",mentorRouter);
