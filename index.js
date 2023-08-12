@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from "cors";
 import * as dotenv from 'dotenv';
 import { MongoClient } from 'mongodb';
 import { mentorRouter } from './Routes/mentors.js';
@@ -8,6 +9,8 @@ import { assignRouter } from './Routes/assign.js';
 dotenv.config();
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
